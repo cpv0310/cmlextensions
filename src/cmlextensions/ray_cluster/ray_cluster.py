@@ -18,7 +18,7 @@ DEFAULT_DASHBOARD_PORT = os.environ['CDSW_APP_PORT']
 class RayCluster():
     """Ray Cluster built on CML Worker infrastructure"""
 
-    def __init__(self, num_workers, worker_cpu=2, worker_memory=4, head_cpu=2, head_memory=4, dashboard_port=DEFAULT_DASHBOARD_PORT, env
+    def __init__(self, num_workers, worker_cpu=2, worker_memory=4, nvidia_gpu=0, head_cpu=2, head_memory=4, dashboard_port=DEFAULT_DASHBOARD_PORT, env
 ={}):
         self.num_workers = num_workers
         self.worker_cpu = worker_cpu
@@ -63,6 +63,7 @@ class RayCluster():
             'n': self.num_workers,
             'cpu': self.worker_cpu,
             'memory': self.worker_memory,
+            'nvidia_gpu': self.nvidia_gpu
             'code': worker_start_cmd,
             'env': self.env,
         }
