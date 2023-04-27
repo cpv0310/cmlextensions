@@ -64,7 +64,7 @@ class RayCluster():
             'n': self.num_workers,
             'cpu': self.worker_cpu,
             'memory': self.worker_memory,
-            'nvidia_gpu': self.worker_nvidia_gpu,
+            'worker_nvidia_gpu': self.worker_nvidia_gpu,
             'code': worker_start_cmd,
             'env': self.env,
         }
