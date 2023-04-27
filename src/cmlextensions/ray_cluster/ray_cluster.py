@@ -23,7 +23,7 @@ class RayCluster():
         self.num_workers = num_workers
         self.worker_cpu = worker_cpu
         self.worker_memory = worker_memory
-        self.nvidia_gpu = worker_nvidia_gpu,
+        self.worker_nvidia_gpu = worker_nvidia_gpu,
         self.head_cpu = head_cpu
         self.head_memory = head_memory
         self.dashboard_port = dashboard_port
